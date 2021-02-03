@@ -3,7 +3,7 @@
 
 ###### Estudos em JS.
 
-[JAVASCRIPT ES6 ESSENCIAL:](https://github.com/)
+[JAVASCRIPT ES6 ESSENCIAL:](https://github.com/Caiuzu/javascript-stack/tree/master/JavaScript-ES6-Essencial)
 ---
  - Introdução ao ES6;
  - Tipos, Variáveis, Condicionais e Repetição;
