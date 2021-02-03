@@ -75,7 +75,7 @@
       ```
 ---
 ### 2 - Currying, Hoisting, Imutabilidade, Tipos e Variáveis:
-- ####**Currying:**
+- #### **Currying:**
     - É uma técnica de transformação de uma função que recebe múltiplos parâmetros de forma que ela pode ser chamada como uma cadeia de funções que recebem somente um parâmetro cada.
 
     **Função sem Currying:** [1-currying.js](./Currying/1-currying.js)
@@ -107,7 +107,7 @@
     ```
 
 ---
-- ####**Hoisting:**
+- #### **Hoisting:**
     - O Hoisting ocorre quando seu código Javascript é compilado : Basicamente, todas as **DECLARAÇÕES** (_as atribuições não_) de variáveis são movidas para o topo de seu escopo local (se foram declaradas dentro de uma função, por exemplo) ou para o topo do escopo global (se foram declaradas fora de uma função).
 
   **Hoisting em variáveis:** [1-hoisting.js](./Hoisting/1-hoisting-variaveis.js)
@@ -136,7 +136,7 @@
     ```
 
 ---
-- ####**Imutabilidade:**
+- #### **Imutabilidade:**
   - Itens imutáveis podem ser declarados como const (constante) cujo o conteúdo não deve ser alterado (mas pode ser copiado e modificado). Não é possível alterar um objeto imutável, você pode copiá-lo e modificar seu valor.
     - Um objeto nunca é atualizado, ele vai ser copiado e só alteramos o que queremos, usando concat, map, filter, etc.
     
@@ -173,7 +173,7 @@
     console.log('\nLista de alunos');
     console.log(students);
 ```
-- ####**Variáveis:**
+- #### **Variáveis:**
   - `Let` e `const` respeitam os escopos de blocos respectivos, diferente da antiga forma, `var`
       - **Exemplo 1:** [1-variaveis.js](./Variaveis/1-variaveis.js)
       - **Exemplo 2:** [2-variaveis.js](./Variaveis/2-variaveis.js)
