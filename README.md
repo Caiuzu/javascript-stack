@@ -1,7 +1,7 @@
 # PLANO DE ESTUDOS - JAVASCRIPT
 ###### Por: [@Caiuzu](https://github.com/Caiuzu)
 
-######Estudos em JS.
+###### Estudos em JS.
 
 [JAVASCRIPT ES6 ESSENCIAL:](https://github.com/)
 ---
