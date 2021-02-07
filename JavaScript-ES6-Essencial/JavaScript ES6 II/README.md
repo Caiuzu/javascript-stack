@@ -196,5 +196,294 @@ const directions = {
 
 ## Functions e Operadores:
 
-array e functions...
+### Operadores Aritiméticos:
+```JavaScript
+  // Módulo (%)
+  // Operador binário. Retorna o inteiro restante da divisão dos dois operandos.
+  12 % 5 // retorna 2.
+  
+  // Incremento (++) e Decremento (--)
+  ++x
+  X++
+  
+  const a = ++2 // 3
+  const b = 2++ // 2
+  
+  --x;
+  x--;
+  
+  // Negação (-) e Adição (+)
+  -3
+  +"3"    // retorna 3
+  +true   // retorna 1
+  +false  // retorna 0
+  -true   // retorna -1
+  
+  // Operador de exponenciação (**)
+  2 ** 3   // retorna 8
+  10 ** -1 // retoarna 0.1
+  
+  // Operador de agrupamento ()
+  2 * (3 + 2)
+```
 
+### Operadores de atribuição:
+```JavaScript
+// Atribuição
+x = y
+
+// Atribuição de adição
+x = x + y
+x += y
+
+// Atribuição de subtração
+x = x - y //ou
+x -= y
+
+// Atribuição de multiplicação
+x= x * y // ou
+x *= y
+
+//Atribuição de divisão
+x = x / y //ou
+x /= y
+
+//Atribuição de resto
+x = x % y // ou
+X %= y
+```
+### Operadores de comparação:
+```JavaScript
+
+// Igual (==)
+// Retorna verdadeiro caso os operandos sejam iguais. 3 == var1
+"3" == var1
+3 == '3'
+
+// Não igual (!=)
+// Retorna verdadeiro caso os operandos não sejam iguais. var' != 4
+var2 != "3"
+
+// Estritamente igual (===)
+// Retorna verdadeiro caso os operandos sejam iguais e do mesmo tipo. Veja tambem Object.is e igualdade
+3 === var1
+
+// Estritamente não igual (!==)
+// Retorna verdadeiro caso os operandos não sejam iguais e/ou não sejam do mesmo tipo
+3 === var1
+3 !== '3'
+
+// Maior que (>)
+// Retorna verdadeiro caso o operando da esquerda seja maior que o da direita
+var2 > var1
+"12" > 2
+
+// Maior que ou igual (>=)
+// Retorna verdadeiro caso o operando da esquerda seja maior ou igual que ao da direita
+var2 >= var1
+"12" >= 3
+
+// Menor que (<)
+// Retorna verdadeiro caso o operando da esquerda seja Menor que o da direita
+var2 < var1
+"12" < "2"
+
+// Menor que ou igual (<=)
+// Retorna verdadeiro caso o operando da esquerda seja Menor ou igual que ao da direita
+var2 <= var1
+"12" <= 5
+
+```
+
+### Operadores de condicionais (ternário):
+```JavaScript
+condicao ? valor1 : valor2
+
+true ? 'foo' : 'bar'    // retorna 'foo'
+false ? 'foo' : 'bar'   // retorna 'bar
+```
+
+### Operadores de lógicos:
+```JavaScript
+// And lógico (&&)
+exp1 && exp2
+
+var a1 =  true && true;      // t && t retorna true
+var a2 =  true && false;     // t && t retorna false
+var a3 =  false && true;     // t && t retorna false
+var a4 =  false && (3 == 4); // t && t retorna false
+var a5 =  "Gato" && "Cão";   // t && t retorna Cão
+var a6 =  false && "Gato";   // t && t retorna false
+var a7 =  "Gato" && true;    // t && t retorna false
+
+
+// OR lógico (||)
+exp1 || exp2
+
+var a1 =  true || true;      // t || t retorna true
+var a2 =  true || false;     // t || t retorna true
+var a3 =  false || true;     // t || t retorna true
+var a4 =  false || (3 == 4); // t || t retorna false
+var a5 =  "Gato" || "Cão";   // t || t retorna Gato
+var a6 =  false || "Gato";   // t || t retorna Gato
+var a7 =  "Gato" || true;    // t || t retorna Gato
+
+// NOT lógico (!)
+!exp1
+
+var n1 =  !true;   // !t retorna false
+var n2 =  !false;  // !t retorna true
+var n3 =  !"Gato"; // !t retorna false
+
+// True
+" " //isso retonaria 1 por conta do espaço, pois é considerado com 
+
+```
+### Spread
+
+```JavaScript
+var partes = ['ombro','joelhos'];
+var musica = ['cabeça', ...partes, 'e', 'pés'];// este objeto, teoricamente para o sistema, está como na linha abaixo
+var musica = ['cabeça','ombro','joelhos', 'e', 'pés']; // assim, onde ...partes torna-se 'ombro','joelhos', basicamente
+
+function fn(x, y, z){ } 
+var args = [0, 1, 2];
+fn(...args); // Em funções, cada item será passado como parâmetros um a um x receberá 0, y receberá 1 e z receberá 2
+// ou seja, não precisaria utilizar um for para relacionar cada parâmetro a um valor de entrada de um objeto/array
+```
+
+### Operadores unitários:
+```JavaScript
+// Deletar algo
+delete something;
+
+// Deletar tipo
+typeof something;
+```
+
+### Operadores binários:
+```JavaScript
+// in
+something in something
+
+// Arrays - basicamente se algo existe dentro de um objeto, array
+var arvores = new Array('pau-brasil', 'loureiro', 'cedro', 'carvalho', 'sicômoro')
+0 in arvores // retorn true
+3 in arvores // retorn true
+6 in arvores // retorna false
+
+'cedro' in arvores // retorna false ( você deve especificar o número do índice, não o valor naquele índice)
+'cedro' in arvores[2] // retorna true ( você deve especificar o número do índice, não o valor naquele índice)
+
+'length' in arvores // retorna true (length é uma propriedade de Array)
+
+// Objetos predefinidos
+"PI" in math // retorna true
+var minhaString = new String("coral")
+'length' in minhaString // retorna true
+
+// Objetos personalizados
+var meucarro = {marca: 'Honda', modelo: 'Accord', ano: 1998}
+'marca' in meucarro // retorna true
+'modelo' in meucarro // retorna true
+
+// instaceof
+objeto instanceof tipoObjeto
+
+var dia = new Date(2018, 12, 17)
+
+if (dia instanceof Date) {
+  // code here
+}
+```
+
+## Condicionais:
+
+### if:
+- [exemplo prático de if](./Condicionais/if-else/if.js)
+
+```JavaScript
+
+  if (condition) {
+  // code
+  } else {
+   //code
+  }
+
+```
+
+### if-else:
+- [exemplo prático de else if](./Condicionais/if-else/else-if.js)
+
+```JavaScript
+
+if (condition) {
+    //code
+} else if (condition) {
+    // code
+}
+
+```
+
+
+### switch:
+- [exemplo prático de switch](./Condicionais/switch-case/swtich.js)
+
+```JavaScript
+
+
+switch (expressão) {
+    case valor1:
+        break;
+    case valorn:
+        break;
+    default:
+        break;
+}
+
+```
+
+## Estrutura de Repetição:
+
+### for:
+- [exemplo prático de for](./EstruturasDeRepeticao/for/for.js)
+```JavaScript
+
+for ([explessãoInicial]; [condição]; [incremento]) {
+    // Declaração
+}
+
+```
+
+### for-in:
+- [exemplo prático de for-in](./EstruturasDeRepeticao/for/for-in.js)
+```JavaScript
+
+for(let item in objeto) {
+    console.log(item);
+}
+
+```
+
+### while:
+- [exemplo prático de while](./EstruturasDeRepeticao/while/while.js)
+```JavaScript
+
+while (condição) {
+    declaração
+}
+
+```
+
+### do-while:
+- [exemplo prático de do-while](./EstruturasDeRepeticao/while/do-while.js)
+```JavaScript
+
+do {
+    declaração
+} while (condição)
+
+```
+### Controle de Repetição:
+- [Exemplo da utilização de break](./EstruturasDeRepeticao/controleRepeticao/controleRepeticao.js)
+- [Exemplo da utilização de continue](./EstruturasDeRepeticao/controleRepeticao/controleRepeticao.js)
