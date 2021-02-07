@@ -206,8 +206,8 @@ const directions = {
   ++x
   X++
   
-  const a = ++2 // 3
-  const b = 2++ // 2
+  const a = ++2; // 3
+  const b = 2++; // 2
   
   --x;
   x--;
@@ -459,8 +459,12 @@ for ([explessãoInicial]; [condição]; [incremento]) {
 - [exemplo prático de for-in](./EstruturasDeRepeticao/for/for-in.js)
 ```JavaScript
 
-for(let item in objeto) {
+for(let item in objeto) { // executará exibindo todas as PROPRIEDADES do objeto/array (objeto.foo por exemplo apareceria)
     console.log(item);
+}
+
+for(let item of objeto) { // já o of, demonstra apenas os enumerados ou seja, as posições dentro do array: objeto[0]
+  console.log(item);
 }
 
 ```
@@ -487,3 +491,289 @@ do {
 ### Controle de Repetição:
 - [Exemplo da utilização de break](./EstruturasDeRepeticao/controleRepeticao/controleRepeticao.js)
 - [Exemplo da utilização de continue](./EstruturasDeRepeticao/controleRepeticao/controleRepeticao.js)
+
+---
+---
+## Exercícios de Fixação:
+
+
+**1** - Nos jogos é comum que cada personagem possua atributos para enfrentar os diversos desafios durante as aventuras. Observe o seguinte trecho de código:
+
+```JavaScript
+  let personagem = {
+    velocidade : 9,
+    poder : 15,
+    sorte : 20
+  }
+```
+Qual alternativa abaixo **não** representa uma opção de código válido no objeto personagem?
+
+ **a)** `Object.keys(personagem);`
+
+ **b)** `Object.personagem(velocidade);` 
+
+ **c)** `Object.freeze(personagem);`
+
+ **d)** `Object.assign(personagem, {esquiva: 2});`
+
+ **e)** `Object.entries(personagem);` 
+
+<details>
+<summary>Resposta:</summary>
+
+```JavaScript
+  Object.personagem(velocidade); // Forma inválida
+```
+</details>
+
+---
+
+**2** - Observe o seguinte trecho de código:
+
+```JavaScript
+  const bandas = [
+  {
+    name: 'The Who',
+    genero: 'Rock'
+  },
+  {
+    name: 'Queen',
+    genero: 'Rock'
+  },
+  {
+    name: 'Lenine',
+    genero: 'MPB'
+  },
+  {
+    name: 'Tim Maia',
+    genero: 'MPB'
+  }
+];
+```
+Com base no código acima, se você quiser recuperar apenas bandas de um determinado gênero, qual seria o código correto?
+
+**a)** `const mpb = bandas.filter(bandas === 'MPB');`
+
+**b)** `const soul = bandas.filter(bandas.genero => 'Soul');`
+
+**c)** `const rock = bandas.filter(bandas => bandas.genero === 'Rock');`
+
+**d)** `const sertanejo = bandas.filter(bandas => 'Sertanejo');`
+
+**e)** `const pop = bandas.filter(bandas === bandas.genero === 'Pop');`
+
+<details>
+<summary>Resposta:</summary>
+
+```JavaScript
+  const rock = bandas.filter(bandas => bandas.genero === 'Rock');
+```
+</details>
+
+---
+
+**3** - A variável do tipo string possui recursos como "length", "split", "replace", "slice", "substr" e entre outras. Sobre o recurso "replace", vale notar que ele substitui apenas o primeiro termo pelo novo termo, portanto ele não substitui todos os termos encontrados na string, a menos que isso seja feito em um loop. Observe o seguinte trecho de código:
+
+```JavaScript
+  const frase = "Science without religion is lame, religion without science is blind."
+  frase.replace("without", "with");
+```
+Com base no contexto, como estaria a frase corretamente?
+
+**a)** `"Science out religion is lame, religion without science is blind."`
+
+**b)** `"Science with religion is lame, religion with science is blind."`
+
+**c)** `["Science", "with", "religion", "is", "lame", "religion", "without", "science", "is", "blind."]`
+
+**d)** `"Science with religion is lame, religion without science is blind."`
+
+**e)** `"Science without religion is lame, religion with science is blind."`
+
+<details>
+<summary>Resposta:</summary>
+
+```JavaScript
+  "Science with religion is lame, religion without science is blind."
+```
+</details>
+
+---
+
+**4** - Qual das alternativas abaixo está correta?
+
+```
+I - O comando object.freeze não permite a criação, alteração nem a remoção de propriedades.
+II – O comando object.seal não permite que a propriedade seja deletada nem criada.
+III – Para trocar o valor de uma propriedade que já existe é usado o comando object.foo.
+```
+
+
+**a)** `Todas estão corretas.`
+
+**b)** `Apenas II está errada.`
+
+**c)** `Apenas III está errada.`
+
+**d)** `Apenas III está correta.`
+
+**e)** `Apenas II e III estão corretas.`
+
+<details>
+<summary>Resposta:</summary>
+
+```JavaScript
+  "Apenas III está errada."
+```
+</details>
+
+---
+
+**5** - Qual a finalidade do operador `typeof`?
+
+**a)** `O typeof é um operador unário que retorna em um string indicado um tipo de operando.`
+
+**b)** `Nenhuma das alternativas.`
+
+**c)** `O typeof é um operador que executa operadores de tipo específico.`
+
+**d)** `O typeof é um operador unário que executa operadores através de strings.`
+
+**e)** `O typeof é um operador binário que fica depois do seu operando.`
+
+<details>
+<summary>Resposta:</summary>
+
+```JavaScript
+  "O typeof é um operador unário que retorna em um string indicado um tipo de operando."
+```
+</details>
+
+---
+
+**6** - O número pi é obtido quando se divide o perímetro pelo diâmetro, sendo representado por um número infinito de casas decimais, o que seria inadmissível escrever aqui. Para facilitar, podemos usar qual comando da variável numérica para escrever apenas algumas casas decimais? Considere que o valor esteja em uma variável chamada "numeroPi".
+
+**a)** `numeroPi = numeroPi.toFixed(7), para retornar "3,14159"`
+
+**b)** `numeroPi = numeroPi.toString(2), para retornar "3,14"`
+
+**c)** `numeroPi = numeroPi.toFixed(3), para retornar "3,14"`
+
+**d)** `numeroPi = numeroPi.parseFloat(numeroPi);`
+
+**e)** `numeroPi = numeroPi.toFixed(2), para retornar "3,14"`
+
+<details>
+<summary>Resposta:</summary>
+
+```JavaScript
+  numeroPi = numeroPi.toFixed(2); //para retornar "3,14"
+```
+</details>
+
+---
+
+**7** - Observe os seguintes exemplos:
+
+```JavaScript
+    const filmes = ['Meia-noite em Paris', 'Machete', 'Taxi Driver', 'Matrix'];
+```
+
+Assinale abaixo a estrutura de repetição correta que poderia listar os filmes da lista.
+
+**a)** `for(let filmes in filme)`
+
+**b)** `for(let filmes of filme)`
+
+**c)** `while(filmes.length)`
+
+**d)** `do{filmes += 1} while (filmes.length < 4)`
+
+**e)** `for(let index = 0; index < filmes; index++)`
+
+<details>
+<summary>Resposta:</summary>
+
+```JavaScript
+  for(let filmes of filme){}
+```
+</details>
+
+---
+
+**8** - Qual comando deve ser usado para que o objeto não sofra mudança sob nenhuma circunstância?
+
+**a)** `stay.object();`
+
+**b)** `object.stay();`
+
+**c)** `obj.quaxxor();`
+
+**d)** `object.freeze();`
+
+**e)** `freeze.object();`
+
+<details>
+<summary>Resposta:</summary>
+
+```JavaScript
+  object.freeze();
+```
+</details>
+
+---
+
+**9** - Leia as sentenças e assinale a alternativa correta.
+
+```
+  I – Operadores unários de negação não retornam a negação do seu operando. 
+ II – Operadores binários retornam o resultado da divisão de dois operandos.
+III – Operadores unários possuem apenas um operando, que podem vir antes ou depois do operador.
+```
+
+**a)** `Apenas III está correta.`
+
+**b)** `Todas estão corretas.`
+
+**c)** `Apenas II e III estão erradas.`
+
+**d)** `Apenas I e II estão corretas.`
+
+**e)** `Apenas I está errada.`
+
+
+<details>
+<summary>Resposta:</summary>
+
+```JavaScript
+  "Apenas I está errada."
+```
+</details>
+
+---
+
+**10** - Nomes de filósofos gregos muitas vezes são parecidos e é possível até fazer rimas com eles, mesmo que seus ideais podiam não ser totalmente compatíveis. Observe o seguinte trecho de código:
+
+```JavaScript
+    const filosofo = "Sócrates";
+```
+
+Para trocarmos "Sócrates" por "Hipócrates", qual código abaixo usaríamos?
+
+**a)** `filosofo = "Não entendo de filosofia";`
+
+**b)** `filosofo = filosofo.replace("Hipó","Só");`
+
+**c)** `filosofo = filosofo.substr(2,7) + "Hipó";`
+
+**d)** `filosofo = "Hipó" + filosofo.substr(2,7);`
+
+**e)** `filosofo = "Hipó" + filosofo.split(2,7);`
+
+<details>
+<summary>Resposta:</summary>
+
+```JavaScript
+  filosofo = "Hipó" + filosofo.substr(2,7);
+```
+</details>
