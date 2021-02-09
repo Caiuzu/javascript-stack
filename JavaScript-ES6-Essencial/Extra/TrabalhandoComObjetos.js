@@ -18,7 +18,7 @@ as ferramentas tem nome e utilidade
  */
 
 
-const Funcionario = { nome: "Caio", idade: 15, ferramenta: [{nome: "computador", funcionalidade:"programar"}, {nome: "loló", funcionalidade:"baforar"}]};
+const Funcionario = { nome: "Caio", idade: 15, ferramenta: [{nome: "computador", funcionalidade:"programar"}, {nome: "martelo", funcionalidade:"martelar"}]};
 
 let profissional = Funcionario;
 
