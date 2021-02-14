@@ -29,7 +29,7 @@ function listarTecnologias(listaDeTecnologias) { // cria a function
 }
 
 // Listar todas tecnologias do array
-console.log(`O usuário ${programador.nome} tem ${programador.idade} anos e usa as tecnologias ${listarTecnologias(programador.tecnologias)}`);
+console.log(`O usuário ${programador.nome} tem ${programador.idade} anos e usa as tecnologias${listarTecnologias(programador.tecnologias)}.`);
 
 
 // listar uma tecnologia de um index específico 'programador.tecnologias[0]'
