@@ -1,14 +1,21 @@
 'use strict';
-class Animal {
-    constructor(qtdePatas){
-        this.qtdePatas = 4
+
+ class Animal {
+    constructor(cor, tamanho, morde) {
+        this.qtdePatas = 4;
+        this.cor = cor;
+        this.tamanho = tamanho;
+        this.morde = morde;
     }
 }
+
 class Cachorro extends Animal {
-    constructor(morde){
-        super(4);
-        this.morde = 4;
+    constructor(late, cor, tamanho) {
+        super(cor, tamanho, true);
+        this.alimentacao = 'Carnivoro';
+        this.late = late;
     }
 }
-const pug = new Cachorro (false);
+
+const pug = new Cachorro(false, 'branco', 'pequeno');
 console.log(pug);

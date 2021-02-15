@@ -33,7 +33,7 @@ myText.constructor -> String // meu constructor do myText é uma string
 myText.__proto__ -> String.prototype // logo e o proto vai ser igual o String.prototype
 ```
 
-Função construtora: [exemplo 0-prototype.js](./prototype/0-prototype.js)
+Função construtora: [exemplo 0-prototype.js](./Prototype/0-prototype.js)
 
 ```JavaScript
 function Pessoa(name) {

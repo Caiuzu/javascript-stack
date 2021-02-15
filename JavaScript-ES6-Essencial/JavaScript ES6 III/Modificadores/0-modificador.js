@@ -1,20 +1,23 @@
-//modificadores de acesso versão nova
+//modificadores de acesso versão com function
 'use strict';
 
 function Person(innitialName) {
+
     let name = innitialName;
+
     this.getName = function () {
         return name;
     }
+
     this.setName = function (newName) {
-        name = newname;
+        name = newName;
     }
 }
 
 const p = new Person('Bruna');
-'use strict'
+
 console.log(p);
-p.getName();
-p.name;
+console.log(p.getName());
+
 p.setName('Cristina');
-p.getName;
+console.log(p.getName());
