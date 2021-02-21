@@ -94,3 +94,15 @@ const pesoYoungPets = pets
     }, 0)
 
 console.log("A soma dos pesos dos animais abaixo de 10 anos é igual a " + pesoYoungPets)
+
+//const totalWeightDogs = pets.filter(pet => pet.type === 'fish');
+
+const totalWeightDogs = pets.filter((pet) => {
+    if (pet.type) {
+        return pet.type === 'fish';
+    } else {
+        return pet.type === 'dog'
+    }
+})
+
+console.log(totalWeightDogs);
