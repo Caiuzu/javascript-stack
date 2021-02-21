@@ -1,41 +1,47 @@
 const pets = [
     {
-        name: "rex",
+        name: "snoop",
         type: "dog",
         age: 9,
-        peso: 15
+        weight: 15.0
     },
     {
-        name: "chana",
+        name: "naja",
+        type: "dog",
+        age: 1,
+        weight: 1.0
+    },
+    {
+        name: "miau",
         type: "cat",
         age: 5,
-        peso: 3
+        weight: 3.0
     },
     {
-        name: "nemo",
+        name: "gulp",
         type: "fish",
         age: 1,
-        peso: 0.01
+        weight: 0.01
     },
     {
-        name: "epona",
+        name: "pé de pano",
         type: "horse",
         age: 22,
-        peso: 200
+        weight: 200.0
     },
     {
-        name: "policarpio",
+        name: "mayko",
         type: "donkey",
         age: 7,
-        peso: 150
+        weight: 15.0
     },
     {
-        name: "esguicho",
+        name: "bolt",
         type: "turtle",
         age: 112,
-        peso: 55
+        weight: 5.5
     }
-]
+];
 
 //Reduce para trazer a soma das idades
 const totalAge = pets.reduce((total, pet) => {
@@ -45,58 +51,63 @@ const totalAge = pets.reduce((total, pet) => {
     return total + pet.age
 }, 0)
 
-console.log("A soma das idades dos animais é igual a " + totalAge)
+console.log("\nAge: " + totalAge)
 
-//Reduce para trazer a média do peso
-const avgPeso = pets.reduce((avg, pet) => {
+//Reduce para trazer a média do weight
+const avgweight = pets.reduce((avg, pet) => {
     //console.log(`Total: ${avg}`)
     //console.log(`Pet: ${pet.name}`)
 
-    return avg + (pet.peso / pets.length)
+    return avg + (pet.weight / pets.length)
 }, 0)
 
-console.log("A média do peso dos animais é igual a " + avgPeso.toFixed(2))
+console.log("\nweight median: " + avgweight.toFixed(2))
 
 // Aqui, mostro como usar o reduce para trazer mais de um objeto
-const totalAgePeso = pets.reduce((total, pet) => {
+const totalAgeWeight = pets.reduce((total, pet) => {
     return {
         totalAge: total.totalAge + pet.age,
-        totalPeso: total.totalPeso + pet.peso
+        totalWeight: total.totalWeight + pet.weight
     }
-}, {totalAge: 0, totalPeso: 0})
+}, {totalAge: 0, totalWeight: 0})
 
-const avgAgePeso = pets.reduce((avg, pet) => {
+const avgAgeWeight = pets.reduce((avg, pet) => {
     return {
         avgAge: avg.avgAge + pet.age / pets.length,
-        avgPeso: avg.avgPeso + pet.peso / pets.length
+        avgWeight: avg.avgWeight + pet.weight / pets.length
     }
-}, {avgAge: 0, avgPeso: 0})
+}, {avgAge: 0, avgWeight: 0}) // https://stackoverflow.com/questions/60730003/tofixed-after-using-reduce-method-js
 
-console.log(totalAgePeso)
-console.log(avgAgePeso) //Não sei limitar o número de casas decimais nesse caso
+console.log(totalAgeWeight)
+console.log(avgAgeWeight)
 
 //Utilizando o reduce com condicionais
-const somaPesoPesado = pets.reduce((soma, pet) => {
-    if (pet.peso < 50) return soma
-
-    return soma + pet.peso
+const somaweightPesado = pets.reduce((soma, pet) => {
+    if (pet.weight < 50)
+        return soma;
+    return (soma + pet.weight).toFixed(2);
 }, 0)
 
-console.log("A soma dos pesos dos animais acima de 50kg é igual a " + somaPesoPesado)
+console.log("\nweights sum > 50: " + somaweightPesado)
 
 //Encadeando o filter com o reduce
-const pesoYoungPets = pets
+const weightYoungPets = pets
     .filter((pet) => {
         return pet.age < 10
     })
     .reduce((total, pet) => {
-        return total + pet.peso
+        return total + pet.weight
     }, 0)
 
-console.log("A soma dos pesos dos animais abaixo de 10 anos é igual a " + pesoYoungPets)
+console.log("\nWeights Sum age < 10 : " + (weightYoungPets).toFixed(2))
+
+//Encadeando o filter com o reduce
+const dogs = pets.filter((pet) => pet.type === 'dog')
+    .reduce((name, pet) => name + pet.name + ', ', 'dogs: ');
+console.log(dogs);
+
 
 //const totalWeightDogs = pets.filter(pet => pet.type === 'fish');
-
 const totalWeightDogs = pets.filter((pet) => {
     if (pet.type) {
         return pet.type === 'fish';
