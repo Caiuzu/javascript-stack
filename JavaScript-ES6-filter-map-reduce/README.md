@@ -74,7 +74,7 @@ console.log(petNames);
 
 ```
 
-- [forEach:]() Não retorna um novo array com a mesma quantidade de elementos.
+- [forEach:](./Code/forEach.js) Não retorna um novo array com a mesma quantidade de elementos.
 
 ```JavaScript
 const forEachPetNames = pets.forEach((pet) => {
@@ -85,7 +85,7 @@ console.log(forEachPetNames);
 console.log(pets);
 ```
 
-- [Reduce:]() Executa uma função para cada elemento retornando um único valor de retorno
+- [Reduce:](./Code/reduce.js) Executa uma função para cada elemento retornando um único valor de retorno
     - `Array.prototype.reduce()`
     - `var newArray = arr.map(callback[, valorInicial])`
     - reduce([:hamburger:, :fries:, :poultry_leg:, :popcorn:]) => :poop:
