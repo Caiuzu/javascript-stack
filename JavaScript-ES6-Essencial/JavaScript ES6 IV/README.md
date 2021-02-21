@@ -1,4 +1,4 @@
-# Aula 2 - Tipos, variáveis, operadores, condicionais e repetição em JavaScript ES6
+# Aula 4 - Manipulação e iteração de arrays em JavaScript ES6
 
 ---
 ## Criando e Manipulando Arrays;
