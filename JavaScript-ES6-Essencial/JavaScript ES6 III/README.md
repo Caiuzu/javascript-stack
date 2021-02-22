@@ -186,14 +186,123 @@ function Person(innitialName) {
       software.
 
 - **Patterns mais utilizados:**
-    - [Factory:](./DesignPatterns/Factory) Todas as funções que retornam um objeto sem a necessidade de chamá-las com o
+    - [Factory:](./DesignPatterns/Factory.js) Todas as funções que retornam um objeto sem a necessidade de chama-las com o
       new, são consideradas funções Factory(Fábrica).
-    - [Singleton:](./DesignPatterns/Singleton) O objetivo desse pattern é criar uma única instância de uma função
-      construtora e retorná-la toda vez em que for necessário utilizá-la.
-    - [Decorator:](./DesignPatterns/Decorator) Uma função decorator recebe uma outra função como parâmetro e estende o
-      seu comportamento sem modificá-la explicitamente.
-    - [Observer:](./DesignPatterns/Observer) É um pattern muito popular em aplicações jacascript. A instância mantém uma
-      coleção de objetos (obseervers) e notifica todos eles quando ocorrem mudanças no estados
-    - [Module:](./DesignPatterns/Module) É um pattern que possibilita organizarmos melhor o nosso código sem a
+    - [Singleton:](./DesignPatterns/Singleton.js) O objetivo desse pattern é criar uma única instância de uma função
+      construtora e retorná-la toda vez em que for necessário utiliza-la.
+    - [Decorator:](./DesignPatterns/Decorator.js) Uma função decorator recebe uma outra função como parâmetro e estende o
+      seu comportamento sem modifica-la explicitamente.
+    - [Observer:](./DesignPatterns/Observer.js) É um pattern muito popular em aplicações JavaScript. A instância mantém uma
+      coleção de objetos (observers) e notifica todos eles quando ocorrem mudanças no estado.
+    - [Module:](./DesignPatterns/Module.js) É um pattern que possibilita organizarmos melhor o nosso código sem a
       necessidade de expor variáveis globais.
 
+### Factory:
+
+```JavaScript
+    function user(customProperties) {
+        return {
+            name: 'Fulano',
+            lastname: 'Beltrano',
+            ...customProperties
+        }
+    }
+    
+    const p = pessoas({name: 'Custom-Name', age: 27});
+    console.log(p);
+```
+
+### Singleton:
+
+```JavaScript
+    function pessoa() {
+        if(!Pessoa.instance) {
+            Pessoa.instance = this;
+        }
+        
+        return Pessoa.instance
+    }
+    
+    const p = Pessoa.call({ name: 'Ciclano'});
+    const p2 = Pessoa.call({ name: 'Custom name'});
+    
+    console.log(p);
+    console.log(p2);
+```
+
+### Decorator:
+
+```JavaScript
+    let loggedIn = false;
+    
+    function callIfAuthenticated(fn) {
+        return !!loggedIn && fn();
+    }
+    
+    function sum(a, b) {
+        return a + b
+    }
+    
+    console.log(callIfAuthenticated(() => sum(2, 3)));
+    loggedIn = true;
+    console.log(callIfAuthenticated(() => sum(2, 3)));
+    loggedIn = false;
+    console.log(callIfAuthenticated(() => sum(2, 3)));
+```
+
+### Observer:
+
+```JavaScript
+    class observable {
+        constructor() {
+            this.observables = [];
+        }
+        
+        subscribe(fn) {
+            this.observables.push(fn);
+        }
+        
+        notify(data) {
+            this.observables.forEach(fn => fn(data));
+        }
+        
+        unsubscriber(fn) {
+            this.observables = this.observables.filter(obs => obs !== fn);
+        }
+    }
+    
+    const o = new Observable();
+    
+    const logData1 = data => console.log(`Subscribe 1: ${data}`);
+    const logData2 = data => console.log(`Subscribe 2: ${data}`);
+    const logData3 = data => console.log(`Subscribe 3: ${data}`);
+    
+    o.subscribe(logData1)
+    o.subscribe(logData2)
+    o.subscribe(logData3)
+    
+    o.notify('notified 1');
+    
+    o.unsubscribe(logData2);
+    
+    o.notify('notified 2');
+```
+
+### Module:
+
+```JavaScript
+    let name = 'default';
+    
+    function getName() {
+        return name;
+    }
+    
+    function setName(newName) {
+        name = newName;
+    }
+    
+    module.exports = {
+        getName,
+        setName
+    };
+```

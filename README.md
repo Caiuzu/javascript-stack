@@ -5,7 +5,7 @@
 ###### Por: [@Caiuzu](https://github.com/Caiuzu)
 
 ###### Estudos em JS.
-[JAVASCRIPT ES6 ESSENCIAL:](https://github.com/Caiuzu/javascript-stack/tree/master/JavaScript-ES6-Essencial)
+[JAVASCRIPT ES6 ESSENCIAL:](./JavaScript-ES6-Essencial)
 ---
  - Introdução ao ES6;
  - Tipos, Variáveis, Condicionais e Repetição;
@@ -13,12 +13,21 @@
  - Manipulação e Iteração de Arrays.
 
 
-[JAVASCRIPT - MAP, FILTER E REDUCE:]()
+[JAVASCRIPT - MAP, FILTER E REDUCE:](./JavaScript-ES6-filter-map-reduce)
 ---
  - Filter;
  - Map;
  - forEach;
  - Reduce;
  - Map and Promise.
+
+[JAVASCRIPT - FUNÇÕES AVANÇADAS:](./JavaScript-ES6-Advanced-Functions)
+---
+ - Arrow Functions, Default Function Arguments e Enhanced Object Literals;
+ - Aplicando conceitos Rest, Spread Operator e Destructuring;
+ - Introdução a Generators;
+ - Aplicando conceitos Promises e Fetch;
+ - Conceitos aplicados a qualidade de código e automação de testes em JS.
+ - Tratamentos e exceções;
 
 
