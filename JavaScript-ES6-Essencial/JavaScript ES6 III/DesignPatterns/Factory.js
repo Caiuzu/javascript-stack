@@ -1,10 +1,15 @@
-function user(customProperties) {
-    return {
-        name: 'Fulano',
-        lastname: 'Beltrano',
-        ...customProperties
-    }
-}
+const user = customProperties => ({
+    name: 'Fulano',
+    lastname: 'Beltrano',
+    ...customProperties
+});
 
-const p = user({name: 'Custom-Name', age: 27});
-console.log(p);
+let person = user({name: 'Custom-Name', age: 27});
+
+console.log(person);
+
+// let serializedJson = JSON.stringify(person);
+// console.log(serializedJson);
+//
+// let jsonParsed = JSON.parse(serializedJson);
+// console.log(jsonParsed);

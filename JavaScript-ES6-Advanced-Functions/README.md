@@ -6,7 +6,7 @@
 
 **#JavaScript #ES6**
 
-[JAVASCRIPT I - Funções avançadas do ES6:](https://github.com/Caiuzu/javascript-stack/tree/master/JavaScript-ES6-Essencial/JavaScript%20ES6%20I)
+[JAVASCRIPT I - Funções avançadas do ES6:](AdvancedFunctionsAndGenerators/FuncoesAvancadas)
 ---
 
 - Funções avançadas do ES6;
@@ -14,19 +14,19 @@
 - Default Function Arguments;
 - Enhanced Object Literals.
 
-[JAVASCRIPT II - Aplicando conceitos Rest, Spread Operator e Destructuring:](https://github.com/Caiuzu/javascript-stack/tree/master/JavaScript-ES6-Essencial/JavaScript%20ES6%20II)
+[JAVASCRIPT II - Aplicando conceitos Rest, Spread Operator e Destructuring:](AdvancedFunctionsAndGenerators/RestSpreadDestructing)
 ---
 
 - Conheça Rest e Spread Operator;
 - Como usar Destructuring em ReactJS.
 
-[JAVASCRIPT III - Introdução a Generators:](https://github.com/Caiuzu/javascript-stack/tree/master/JavaScript-ES6-Essencial/JavaScript%20ES6%20III)
+[JAVASCRIPT III - Introdução a Generators:](AdvancedFunctionsAndGenerators/Generators)
 ---
 
 - Symbols e Iterators;
 - Aprenda sobre Generators e onde utilizá-los.
 
-[JAVASCRIPT IV - Aplicando conceitos Promises e Fetch:](https://github.com/Caiuzu/javascript-stack/tree/master/JavaScript-ES6-Essencial/JavaScript%20ES6%20IV)
+[JAVASCRIPT IV - Aplicando conceitos Promises e Fetch:](./PromisesFetch)
 ---
 
 - Introdução da aula;
@@ -34,7 +34,7 @@
 - Fetch, Async/Await e EventEmitter;
 - Aplicando e praticando os conceitos.
 
-[JAVASCRIPT V - Conceitos aplicados a qualidade de código e automação de testes em JS:](https://github.com/Caiuzu/javascript-stack/tree/master/JavaScript-ES6-Essencial/JavaScript%20ES6%20IV)
+[JAVASCRIPT V - Conceitos aplicados a qualidade de código e automação de testes em JS:](./Testes)
 ---
 
 - Introdução e conceitos;
@@ -43,7 +43,7 @@
 - Veja como trabalhar com Chai - uma excelente biblioteca;
 - Desenvolvendo códigos com Sinon.
 
-[JAVASCRIPT VI - Tratamentos e exceções:](https://github.com/Caiuzu/javascript-stack/tree/master/JavaScript-ES6-Essencial/JavaScript%20ES6%20IV)
+[JAVASCRIPT VI - Tratamentos e exceções:](./Exceptions)
 ---
 
 - Introdução;

@@ -306,3 +306,13 @@ function Person(innitialName) {
         setName
     };
 ```
+
+### Module Import
+
+```JavaScript
+    const {getName, setName} = require('./Desing-Patterns/Module');
+    
+    console.log(getName());
+    console.log(setName('Fulano'));
+    console.log(getName());
+```
