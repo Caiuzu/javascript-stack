@@ -118,3 +118,5 @@ dist
 
 # End of https://www.toptal.com/developers/gitignore/api/node
 /JavaScript-ES6-Advanced-Functions/Testes/node_modules/
+
+/.idea
