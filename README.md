@@ -30,4 +30,10 @@
  - Conceitos aplicados a qualidade de código e automação de testes em JS.
  - Tratamentos e exceções;
 
+[JAVASCRIPT - PROMISES:](./JavaScript-ES6-Promises-AsyncAwait)
+---
+- ;
 
+[JAVASCRIPT - ASYNC/AWAIT:](./JavaScript-ES6-Promises-AsyncAwait)
+---
+- ;

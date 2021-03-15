@@ -249,7 +249,7 @@ const obj4 = {
 
 console.log(obj4)
 
-//cuidados na clonagem dessa maneira, pois os sub-objetos mantem a referência do objeto original, sendo assim se alterar na cópia o original também é alterado.
+//cuidados na clonagem dessa maneira, pois os sub-objetos mantem a referência do objeto Promises, sendo assim se alterar na cópia o Promises também é alterado.
 const obj5 = {
     test: 123,
     subObj: {
