@@ -176,7 +176,7 @@ um componente em outro._
 <td><img [src]="course.imageUrl" width="40" height="40" alt=""></td>
 ```
 
-#### Code scaffolding:
+#### Gerando Novos Componentes (Code scaffolding):
 
 Rode `ng generate component component-name` para gerar um novo componente. Também pode
 usar: `ng generate directive|pipe|service|class|guard|interface|enum|module.`
@@ -272,3 +272,6 @@ em [course-list.component.html](./course-manager/src/app/components/courses/cour
 ```
 
 #### Protegendo Rotas com Guards
+
+- Primeiramente, vamos criar um navbar para navegar entre os componentes da nossa aplicação;
+  [nav-bar.component.ts](./course-manager/src/app/components/courses/course-list.component.html)
