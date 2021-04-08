@@ -32,8 +32,14 @@
 
 [JAVASCRIPT - PROMISES:](./JavaScript-ES6-Promises-AsyncAwait)
 ---
-- ;
+- Entendendo Promises;
 
 [JAVASCRIPT - ASYNC/AWAIT:](./JavaScript-ES6-Promises-AsyncAwait)
 ---
-- ;
+- Entendendo Async/Await;
+
+[JS FRAMEWORKS - INTRODUÇÃO AO ANGULAR 8:](./Framework-Angular-8-Introduction)
+---
+- Primeiros passos para desenvolver com Angular;
+- Lidando com vários componentes;
+- Segregando responsabilidades;
