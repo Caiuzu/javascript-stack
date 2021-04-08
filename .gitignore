@@ -221,5 +221,4 @@ fabric.properties
 
 # End of https://www.toptal.com/developers/gitignore/api/webstorm,node
 /JavaScript-ES6-Advanced-Functions/Testes/node_modules/
-
 /.idea
