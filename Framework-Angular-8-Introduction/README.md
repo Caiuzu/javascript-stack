@@ -270,8 +270,40 @@ em [course-list.component.html](./course-manager/src/app/components/courses/cour
     return value.replace(char, valueToReplace);
     }
 ```
-
+### 3 - Rotas
 #### Protegendo Rotas com Guards
 
-- Primeiramente, vamos criar um navbar para navegar entre os componentes da nossa aplicação;
-  [nav-bar.component.ts](./course-manager/src/app/components/courses/course-list.component.html)
+- Primeiramente, vamos criar um navbar para navegar entre os componentes da nossa aplicação:
+  [nav-bar.component](./course-manager/src/app/components/nav-bar/);
+  - Criaremos o template em [nav-bar.component.html](./course-manager/src/app/components/nav-bar/nav-bar.component.html)
+    
+- Em [app.module.ts: ](./course-manager/src/app/app.module.ts), iremos importar os módulos de rotas do angular;
+```ts
+      RouterModule.forRoot([
+    {
+        path: '', redirectTo: 'courses', pathMatch: 'full'
+    },
+    {
+        path: 'courses', component: CourseListComponent, pathMatch: 'full'
+    }
+])
+```
+- Utilizando route, podemos descartar o uso de `selector:''` nas anotações de `@Component`;
+- Já que removemos também a tag `<app-course-list></app-course-list>` em 
+  [app.module.ts: ](./course-manager/src/app/app.component.html), devemos utilizar a tag 
+  `<router-outlet></router-outlet>`, para avisar ao angular onde deverá ser feito o switch de componentes.
+  - importante notar quando utilizaremos rotas ou selector. Componentes que serão reutilizados em outras partes do projeto, 
+    como nosso `star.component`, podem ser utilizadas via selector. Já uma tela inteira, seria por rotas.
+- Existem duas rotas padrões para o Angular:
+    -  path: '', quando querermos fazer referência a raiz da nossa aplicação
+    -  path: '**', quando não é encontrado o caminho (404)
+    
+- Vamos criar o nosso componente de 404 em [not-found.component](./course-manager/src/app/components/not-found);
+- Em [app.module.ts: ](./course-manager/src/app/app.module.ts), iremos importar o novo módulo de 404;
+```ts
+      RouterModule.forRoot([
+    {
+        path: '**',
+        component: NotFoundComponent
+    }
+])
